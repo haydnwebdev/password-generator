@@ -3,10 +3,10 @@ import secrets
 import random
 import sys
 
-length = 3 # minimum password length required
-num_passwords = 6 # the number of generated passwords to output
-symbols = True # if password must include symbols
-uppercase = True # if password must include uppercase characters
+length: int = 6 # minimum password length required
+num_passwords: int = 6 # the number of generated passwords to output
+symbols: bool = True # if password must include symbols
+uppercase: bool = False # if password must include uppercase characters
 
 
 def check_password_length(length: int):
@@ -39,8 +39,8 @@ def generate_password(length: int, symbols: bool, uppercase: bool) -> str:
     check_password_length(length)
 
     # Basic combination includes lowercase and digits
-    combination = string.ascii_lowercase + string.digits
-    new_password = []
+    combination: str = string.ascii_lowercase + string.digits
+    new_password: list = []
 
     # Add mandatory characters if required
     if symbols:
